@@ -1,4 +1,4 @@
-# 🔐 Cybersecurity Lab Setup
+  # 🔐 Cybersecurity Lab Setup
 
 **NetworkWalks | Week 01 | Project Module 01**
 
@@ -102,10 +102,13 @@ A custom NAT Network was created in VirtualBox using the following subnet:
 ```text
 10.0.0.0/24
 ```
+<img width="1902" height="1068" alt="NAT Network" src="https://github.com/user-attachments/assets/3cd53976-6b8a-4992-8fcd-67408ebd74eb" />
 
 This network provides a dedicated communication layer and allows the Kali Linux guest to access the Internet through VirtualBox’s NAT functionality.
 
 ### 4. Import and Configure Kali Linux
+
+<img width="1920" height="1003" alt="kali" src="https://github.com/user-attachments/assets/1b75bc80-9bde-41ee-87ac-5c910041eceb" />
 
 The Kali Linux archive was extracted using 7-Zip and imported into VirtualBox. The VM was then connected to the newly created NAT Network.
 
@@ -113,6 +116,9 @@ The network adapter settings were reviewed to ensure that the guest was attached
 
 ### 5. Configure the Kali Linux Network
 
+<img width="1920" height="1003" alt="ip manual" src="https://github.com/user-attachments/assets/6638b7bc-38f5-4469-bd72-77d673456546" />
+
+<img width="1920" height="1003" alt="commands" src="https://github.com/user-attachments/assets/de9992d4-d6bb-4eba-b42a-b39f3c333d5f" />
 Kali Linux was configured with the required IPv4 address:
 
 ```text
@@ -205,7 +211,7 @@ This confirmed DNS resolution and external connectivity from the Kali Linux virt
 
 ### 1. IP Address Conflict
 
-Kali Linux initially received `10.0.0.3` with the gateway `10.0.0.1`, while the lab required `10.0.0.2/24`.
+Kali Linux initially received `10.0.0.3`+ with the gateway `10.0.0.1`, while the lab required `10.0.0.2/24`.
 
 Assigning `10.0.0.2` manually caused an IP conflict with the existing NAT Network configuration.
 
@@ -258,15 +264,6 @@ ping -c 4 google.com
 
 ---
 
-### 3. Transferring Screenshots from Kali Linux
-
-Screenshots captured in Kali Linux needed to be transferred to the Windows host for documentation.
-
-**Solution:**
-The `/downloads` shared folder was configured between the host and guest. Drag-and-drop and clipboard sharing were also enabled to support file and text transfers.
-
----
-
 ## 💡 What I Learned
 
 Through this project, I learned how to create and configure a virtual environment for cybersecurity practice. The most important lessons were:
@@ -302,16 +299,13 @@ The tools must never be used against public or third-party systems without autho
 * [Kali Linux](https://www.kali.org/)
 * [7-Zip](https://7-zip.org/)
 * NetworkWalks — Week 01, Project Module 01
-* Linux `ip`, `ping`, and NetworkManager documentation
-
 ---
 
 ## 👤 Author
 
-**D**
+**Debashree Sinha**
 
-BCA Graduate | Aspiring Cybersecurity Analyst
-
+LinkedIn : www.linkedin.com/in/debashrees
 ---
 
 ### 📌 Project Information
@@ -319,4 +313,4 @@ BCA Graduate | Aspiring Cybersecurity Analyst
 **Program:** NetworkWalks Cybersecurity Internship
 **Week:** 01
 **Project:** Cybersecurity Lab Setup
-**Focus:** Virtualization, Networking & Linux
+**Focus:** Virtualization, Networking & Kali Linux
